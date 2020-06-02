@@ -40,4 +40,4 @@ jobs:
       
       
     - name: Deploy to surge
-      run: surge ./build onlinedelivery-react.surge.sh {{secrets.SURGE_TOKEN}} 
+      run: surge ./build onlinedelivery-react.surge.sh ${{secrets.SURGE_TOKEN}} 

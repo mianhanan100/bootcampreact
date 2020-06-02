@@ -34,10 +34,11 @@ jobs:
 
     - name: Build React App
       run: yarn build
-    # Runs a set of commands using the runners shell
+      
+    
     - name: Install Surge
-      run: npm install --global surge
+      run: npm install -g surge
       
       
     - name: Deploy to surge
-      run: surge ./build onlinedelivery-react.surge.sh ${{secrets.SURGE_TOKEN}} 
+      run: surge ./build onlinedelivery-react.surge.sh --token ${{secrets.SURGE_TOKEN}} 
